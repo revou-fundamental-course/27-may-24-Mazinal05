@@ -1,0 +1,64 @@
+body {
+    margin: 0px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: antiquewhite;
+}
+
+nav > section {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.logo-icon {
+    height: 80px;
+    width: 80px;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-image: url("assets/izaz/png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+.nav-item {
+    border: 1px solid black;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.section-content {
+    background-color: aquamarine;
+}
+
+.banner-container {
+    height: 338px;
+    border: 1px solid black;
+}
+
+.facility-list {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.form-result {
+    height: 100px;
+    border: 1px solid black;
+}
+
+.message-us-section {
+    display: flex;
+}
+
+.result-container {
+    width: 200px;
+    margin-left: 50px;
+}
