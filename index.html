@@ -9,84 +9,130 @@
     
     <body>
         <nav>
-            <div class="logo-icon"></div>
+            <img src="assets/izazfal.png" class="logo-icon">
 
             <section>
                 <a class="nav-item" a href="#home">Home</a>
-                <a class="nav-item" a href="#facility">Our Facilities</a>
+                <a class="nav-item" a href="#portfolio">Portfolio</a>
                 <a class="nav-item" a href="#message">Contact Us</a>
             </section>
         </nav>
 
-        <hr>
 
         <section class="section-content">
             <!--home-->
-            <section id="home">
+            <section  class="home" id="home">
                 <header>
-                    <h1>Welcome to my website</h1>
+                    <h2 class="heading-title">Hey <span id="name"></span>, Welcome to My Portfolio</h2>
                 </header>
 
                 <article>
                     <p>Selamat datang di profile website Izaz</p>
 
-                    <div class="banner-container"></div>
+                    <div class="banner-container">
+                        <div class="slider">
+                            <div class="slides">
+                                <div class="img-content fade">
+                                    <img src="assets/1.png" alt="Image 1">
+                                </div>
+                                <div class="img-content fade">
+                                    <img src="assets/2.png" alt="Image 2">
+                                </div>
+                                <div class="img-content fade">
+                                    <img src="assets/3.JPG" alt="Image 3">
+                                </div>
+                            </div>
+                    </div>
                 </article>
             </section>
-
-            <hr>
-
-              <!--our facilites-->
-            <section id="facility"> 
-                <header>
-                    <h1>Our Facilites</h1>
+            
+              <!--My Portofolio-->
+            <section class="portfolio" id="portfolio"> 
+                <header class="portfolio-header">
+                    <h1 class="sub-title">My Portfolio Project</h1>
                 </header>
 
-                <article class="facility-list">
+                <article class="portfolio-list">
                     <div>
-                        <div style="width: 200px; height: 200px; border: 1px solid black; border-radius: 100px;"></div>
-                    <h5>Apalah</h5>
+                        <div style="width: 500px; height: 300px; border: 1px solid black; border-radius: 100px;"><img src="assets/1.png" style="width: 500px; height: 300px; border-radius: 100px;"></div>
+                    <h5>Inayat</h5>
                     </div>
 
                     <div>
-                        <div style="width: 200px; height: 200px; border: 1px solid black; border-radius: 100px;"></div>
-                    <h5>Apalah</h5>
+                        <div style="width: 500px; height: 300px; border: 1px solid black; border-radius: 100px;"><img src="assets/2.png" style="width: 500px; height: 300px; border-radius: 100px;"></div>
+                    <h5>G30SPKI</h5>
                     </div>
 
                     <div>
-                        <div style="width: 200px; height: 200px; border: 1px solid black; border-radius: 100px;"></div>
-                    <h5>Apalah</h5>
+                        <div style="width: 500px; height: 300px; border: 1px solid black; border-radius: 100px;"><img src="assets/3.JPG" style="width: 500px; height: 300px; border-radius: 100px;"></div>
+                    <h5>DO'S and DONT's in SMA VIDATRA</h5>
                     </div>
                 </article>
             </section>
 
-            <hr>
-
               <!--Message Us-->
-            <section id="message">
+            <section class="message" id="message">
                 <header>
-                    <h1>Message us</h1>
+                    <h1 class="sub-title" od>Contact us</h1>
                 </header>
                 <section class="message-us-section">
                     <!--Form-->
                     <section>
-                        <form>
-                            <label>Name :</label>
-                            <input/>
+                        <div style="display: flex; flex: 1; align-content: center; justify-content: center;">
+                        <form name="message-form" onsubmit="return validateForm()" class="form-input">
+                            <table>
+                                <tr>
+                                    <td>Nama</td>
+                                    <td>:</td>
+                                    <td><input placeholder="Nama" type="text" name="full-name" /></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Tanggal Lahir</td>
+                                    <td>:</td>
+                                    <td> <input type="date" name="birth-date" /></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Jenis Kelamin</td>
+                                    <td>:</td>
+                                    <td><input type="radio" id="male" name="gender" value="male" />
+                                        <label for="male">Laki-laki</label>
+                                        <input type="radio" id="female" name="gender" value="male" />
+                                        <label for="female">Perempuan</label></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Pesan</td>
+                                    <td>:</td>
+                                    <td><textarea placeholder="Pesan" name="messages" class="message-input"></textarea></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="3"><input type="submit" value="submit" class="sub-input" onclick="nextSlide()"></td>
+                                </tr>
+                            </table>
                         </form>
+                        </div>
                     </section>
 
                     <!--Result-->
                     <section class="result-container">
-                        <div class="form-result"></div>
+                        <div style="display: flex; flex: 1; align-content: center; justify-content: center;">
+                        <div class="form-result">
+                            <p>Nama: <span id="sender-full-name"></span></p>
+                            <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+                            <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+                            <p>Pesan: <span id="sender-messages"></span></p>
+                        </div>
                     </section>
                 </section>
             </section>
+        </div>
         </section>
-
-        <footer>
-
+        <script src="js/script.js"></script>
+        <footer class="footer">
+            <p>&copy;Built By Izaz</p>
         </footer>
-
     </body>
 </html>

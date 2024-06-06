@@ -4,7 +4,7 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: antiquewhite;
+    background-color: rgb(26, 33, 48);
 }
 
 nav > section {
@@ -16,12 +16,13 @@ nav > section {
 .logo-icon {
     height: 80px;
     width: 80px;
-    border: 1px solid black;
+    border: none;
     border-radius: 50px;
     background-image: url("assets/izaz/png");
     background-size: cover;
     background-repeat: no-repeat;
     margin-left: 20px;
+    padding: 5px;
 }
 
 .nav-item {
@@ -32,26 +33,107 @@ nav > section {
     padding-bottom: 10px;
     color: black;
     text-decoration: none;
+    background-color: rgb(90, 114, 160);
+    box-shadow: 4px 5px 20px;
 }
 
-.section-content {
-    background-color: aquamarine;
+.nav-item:hover {
+    background-color: #666;
+}
+
+.heading-title {
+    margin-top: 20px;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+
+.sub-title {
+    font-size: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 400px;
+    background-color: rgb(90, 114, 160);
+    border-radius: 10px;
+    font-family: sans-serif;
+    padding: 5px;
+    box-shadow: 4px 5px 20px;
+}
+
+.home {
+    text-align: justify;
+    background-color: #ffffff;
 }
 
 .banner-container {
-    height: 338px;
-    border: 1px solid black;
+    height:max-content;
+    width: 100%;
 }
 
-.facility-list {
+.slider {
+    position: relative;
+    width: 50%;
+    margin: auto;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    animation: slide 16s infinite;
+}
+
+.slide {
+    
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.img-content img {
+    width: 100%;
+    display: block;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+.portfolio {
+    background-color:  rgba(66, 153, 225, 0.6);
+    min-height: 500px;
+}
+
+.portfolio-list {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.form-input {
+    margin-left: 50px;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: rgb(253, 255, 226);
+    border-radius: 20px;
 }
 
 .form-result {
-    height: 100px;
+    box-sizing: border-box;
+    width: 500px;
+    padding: 30px;
     border: 1px solid black;
+    background-color: rgb(253, 255, 226);
+    margin-left: 300px;
+}
+
+.message {
+    background-color: rgba(66, 153, 225, 0.6);
 }
 
 .message-us-section {
@@ -59,6 +141,36 @@ nav > section {
 }
 
 .result-container {
-    width: 200px;
-    margin-left: 50px;
+    width: 200%;
+    height: 100%;
+}
+
+.message-input {
+    width: 300px;
+    height: 100px;
+    resize: none;
+    font-size: 15px;
+}
+
+.sub-input {
+    padding: 16px 250px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.sub-input:hover {background-color: green;}
+
+.sub-input:active{
+    background-color: rgb(0, 255, 106);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.footer{
+    background-color: #eee;
+    padding: 1px;
+    text-align: center;
 }
